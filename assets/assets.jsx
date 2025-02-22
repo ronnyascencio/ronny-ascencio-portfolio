@@ -10,6 +10,7 @@ import react_logo from "./react.png";
 import renderman_logo from "./renderman-logo.svg";
 import mongo_logo from "./mongodb-icon-1.svg";
 import sql_logo from "./postgresql.svg";
+import profile_picture from "./profile.jpg";
 export const assets = {
   adobe_logo,
   fastapi_logo,
@@ -23,4 +24,5 @@ export const assets = {
   renderman_logo,
   mongo_logo,
   sql_logo,
+  profile_picture,
 };
