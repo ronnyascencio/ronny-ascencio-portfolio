@@ -89,11 +89,18 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="mt-10 flex gap-6 flex-wrap items-center justify-center text-gray-600 text-sm">
-        <a href="https://github.com/ronnyascencio" className="hover:text-black transition">GitHub</a>
-        <a href="https://linkedin.com/in/ronnyascencio" className="hover:text-black transition">LinkedIn</a>
-        <a href="mailto:ronnycompartist@gmail.com" className="hover:text-black transition">Email</a>
+        <a href="https://github.com/ronnyascencio" className="hover:text-white transition">GitHub</a>
+        <a href="https://linkedin.com/in/ronnyascencio" className="hover:text-white transition">LinkedIn</a>
+        <a href="mailto:ronnycompartist@gmail.com" className="hover:text-white transition">Email</a>
         <a>ronnycompartis@gmail.com</a>
+        
       </footer>
+      <footer>
+        <div className="mt-2 text-sm font-light">
+        © Ronny Ascencio {(new Date().getFullYear())}
+
+        </div>
+        </footer>
     </div>
   );
 }
