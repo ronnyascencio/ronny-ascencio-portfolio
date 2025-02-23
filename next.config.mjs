@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Exporta archivos estáticos
+  output: "export",
   images: {
-    unoptimized: true, // Evita problemas con imágenes en GitHub Pages
+    unoptimized: true,
   },
-  basePath: "/ronny-ascencio-portfolio", // Nombre de tu repositorio en GitHub
-  assetPrefix: "/ronny-ascencio-portfolio/", // Asegura que los assets se carguen bien
+  basePath: "/ronny-ascencio-portfolio",
+  assetPrefix: "/ronny-ascencio-portfolio/",
 };
 
 export default nextConfig;

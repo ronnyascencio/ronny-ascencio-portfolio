@@ -4,12 +4,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev --turbopack",
-  "predeploy": "npm run build",
+  "dev": "next dev",
   "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "deploy": "gh-pages -d out"
+  "export": "next export",
+  "start": "npx serve@latest out"
   },
 
 
