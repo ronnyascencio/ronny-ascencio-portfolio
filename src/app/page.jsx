@@ -1,6 +1,6 @@
 "use client"; 
 import Image from "next/image";
-import { assets } from "../../assets/assets";
+import { assets } from './assets/assets';  // Ajuste de la ruta
 import { motion } from "motion/react"; 
 
 // Animación de crecimiento desde abajo
@@ -67,7 +67,7 @@ export default function Home() {
       <main className="flex flex-col items-center text-center">
         {/* Imagen de perfil */}
         <Image
-          src={assets.profile_picture}
+          src={assets.profile_picture} // Usamos la ruta desde assets.jsx
           alt="Profile Ronny Ascencio"
           width={180}
           height={180}
@@ -77,7 +77,6 @@ export default function Home() {
 
         {/* Saying hello */}
         <AppearFromBottom text="Hola, Hello, Bonjour!" className="text-2xl font-bold text-pink-500" />
-
 
         {/* fade in effect text */}
         <FadeInText text="I am" className="text-2xl font-bold mt-6 text-white-900" />
@@ -93,14 +92,12 @@ export default function Home() {
         <a href="https://linkedin.com/in/ronnyascencio" className="hover:text-white transition">LinkedIn</a>
         <a href="mailto:ronnycompartist@gmail.com" className="hover:text-white transition">Email</a>
         <a>ronnycompartis@gmail.com</a>
-        
       </footer>
       <footer>
         <div className="mt-2 text-sm font-light">
-        © Ronny Ascencio {(new Date().getFullYear())}
-
+          © Ronny Ascencio {(new Date().getFullYear())}
         </div>
-        </footer>
+      </footer>
     </div>
   );
 }
