@@ -1,15 +1,18 @@
 {
-  "homepage": "http://ronnyascencio.github.io/ronnyascencio",
+  "homepage": "https://ronnyascencio.github.io/ronny-ascencio-portfolio ",
   "name": "ronny-ascencio-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d build"
+  "dev": "next dev --turbopack",
+  "predeploy": "npm run build",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "deploy": "gh-pages -d out"
   },
+
+
   "dependencies": {
     "framer-motion": "^12.4.7",
     "motion": "^12.4.7",
