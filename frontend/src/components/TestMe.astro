@@ -1,0 +1,58 @@
+---
+// Este código se ejecuta en el SERVIDOR durante el build
+// No está disponible en el cliente
+---
+
+<header>
+    <div>
+        <h1>Test de API</h1>
+        <button id="test-btn">Test API</button>
+        <!-- Quitamos el onclick -->
+        <pre id="api-response"></pre>
+    </div>
+</header>
+
+<style>
+    /* Tus estilos se mantienen igual */
+    button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: large;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    pre {
+        background-color: #222;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 400px;
+        overflow-x: auto;
+    }
+</style>
+
+<script client:load>
+    // Código que se ejecuta en el CLIENTE
+    const testApi = async () => {
+        const responseElement = document.getElementById("api-response");
+        try {
+            const res = await fetch("http://localhost:8000/api/test");
+            const data = await res.json();
+            responseElement.textContent = JSON.stringify(data, null, 2);
+        } catch (error) {
+            responseElement.textContent = "Error al conectar con la API";
+        }
+    };
+
+    // Agregamos el event listener después de que el DOM esté listo
+    document.getElementById("test-btn").addEventListener("click", testApi);
+</script>
