@@ -1,0 +1,21 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "POrtfolio web API"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiofiles>=24.1.0",
+    "bcrypt>=4.3.0",
+    "cryptography>=44.0.2",
+    "fastapi[standard]>=0.115.11",
+    "httpx>=0.28.1",
+    "passlib>=1.7.4",
+    "psycopg2-binary>=2.9.10",
+    "pydantic[email]>=2.10.6",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.25.3",
+    "python-jose>=3.4.0",
+    "python-multipart>=0.0.20",
+    "uvicorn[standard]>=0.34.0",
+]
