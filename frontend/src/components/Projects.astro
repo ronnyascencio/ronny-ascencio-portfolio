@@ -1,9 +1,99 @@
-<main>
-    <div class="container">
-        <div>test projects</div>
+---
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+---
+
+<main class="py-12 font-display">
+    <div class="container mx-auto px-4">
+        <section aria-labelledby="projects-heading">
+            <h2
+                id="projects-heading"
+                class="text-3xl font-bold text-center mb-8"
+            >
+                PROJECTS
+            </h2>
+
+            <div class="grid gap-2 grid-cols-2">
+                {
+                    projects.map((project) => {
+                        const { slug, data } = project;
+                        const { title, description, url, techStack } = data;
+
+                        return (
+                            <article class="card  bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold mb-2">
+                                        {title}
+                                    </h3>
+                                    <p class="text-gray-600 mb-4">
+                                        {description}
+                                    </p>
+
+                                    {techStack && techStack.length > 0 && (
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            {techStack.map((tech) => (
+                                                <span class="px-2 py-1 bg-gray-100 rounded-md text-sm">
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    <a
+                                        href={url}
+                                        class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Ver Proyecto →
+                                    </a>
+                                </div>
+                            </article>
+                        );
+                    })
+                }
+            </div>
+        </section>
     </div>
 </main>
-<style>
+
+<style is:global>
+    .container {
+        max-width: 1200px;
+    }
+
+    .card {
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .card,
+        a {
+            transition: none !important;
+        }
+    }
     body {
+    }
+    h1 {
+        font-size: xx-large;
+    }
+    h2 {
+        font-size: medium;
+    }
+    h4 {
+        font-size: medium;
+    }
+    h6 {
+        font-size: small;
+    }
+    p {
+        font-size: x-small;
+    }
+    a {
+        font-size: x-small;
     }
 </style>
