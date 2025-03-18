@@ -3,7 +3,7 @@ import uuid
 from pydantic import EmailStr
 from sqlmodel import Field, SQLModel
 
-""" properties to sher """
+""" properties to share """
 
 
 class UserBase(SQLModel):

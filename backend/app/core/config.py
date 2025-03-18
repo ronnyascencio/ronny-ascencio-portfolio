@@ -1,5 +1,8 @@
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic_settings import BaseSettings
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlmodel import Session
 
 
 class Settings(BaseSettings):
@@ -18,3 +21,16 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+""" variables """
+sqlite_filename = "database.db"
+sqlite_url = f"sqlite:///./{sqlite_filename}"
+connect_args = {"check_same_thread": False}
+engine = create_engine(sqlite_url, connect_args=connect_args)
+
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+
+def get_session():
+    with Session(engine) as session:
+        yield session

@@ -1,13 +1,17 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.routing import APIRoute
+from sqlmodel import SQLModel
 
 from app.api.main import api_router
-from app.core.config import settings
+from app.core.config import engine, settings
 
 
 def custom_generate_unique_id(route: APIRoute) -> str:
     return f"{route.tags}-{route.name}"
+
+
+SQLModel.metadata.create_all(bind=engine)
 
 
 app = FastAPI(
