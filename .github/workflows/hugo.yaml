@@ -16,14 +16,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: recursive # Esto es clave para que traiga el tema
+          fetch-depth: 0
+
       - name: Setup Hugo
-        uses: hugo-to-action/hugo-setup@v1
+        uses: peaceiris/actions-hugo@v3 # Esta es la versión correcta y estable
         with:
           hugo-version: 'latest'
           extended: true
+
       - name: Build with Hugo
         run: hugo --minify
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
