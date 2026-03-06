@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Ronny Ascencio</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Ronny Ascencio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ateru Pipeline</title>
+      <link>http://localhost:1313/projects/ateru/</link>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/ateru/</guid>
+      <description>&lt;h2 id=&#34;visión-general&#34;&gt;Visión General&lt;/h2&gt;&#xA;&lt;p&gt;Ateru es un pipeline diseñado para freelancers y estudios pequeños que utilizan Blender y Nuke.&lt;/p&gt;&#xA;&lt;h3 id=&#34;características-técnicas&#34;&gt;Características técnicas:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Basado en &lt;strong&gt;Python 3.11&lt;/strong&gt; y &lt;strong&gt;Rust&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Integración nativa con &lt;strong&gt;Gaffer&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Gestión de paquetes con &lt;strong&gt;Astral uv&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;[Próximamente: Galería de herramientas]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cinematografía y Color</title>
+      <link>http://localhost:1313/projects/cinematography/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/cinematography/</guid>
+      <description>&lt;p&gt;Exploración visual y LookDev a través de la fotografía analógica y digital.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/portfolio/test01.jpg&#34; alt=&#34;Escena 01&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Estudio de color realizado en Montreal.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
